@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ .Nome }} — Minimal Fashion</title>
+</head>
+<body style="margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f5f5;color:#111;">
+
+  <!-- HEADER -->
+  <header style="display:flex;justify-content:space-between;align-items:center;padding:24px 60px;background:white;border-bottom:1px solid #e5e5e5;position:sticky;top:0;">
+    <div style="font-size:24px;font-weight:700;letter-spacing:4px;">
+      {{ .Nome }}
+    </div>
+
+    <nav style="display:flex;gap:32px;font-size:14px;">
+      <a href="#" style="text-decoration:none;color:#111;">Home</a>
+      <a href="#" style="text-decoration:none;color:#111;">Coleção</a>
+      <a href="#" style="text-decoration:none;color:#111;">Masculino</a>
+      <a href="#" style="text-decoration:none;color:#111;">Feminino</a>
+      <a href="#" style="text-decoration:none;color:#111;">Contato</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section style="
+    height:90vh;
+    background:url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1600&auto=format&fit=crop') center/cover;
+    display:flex;
+    align-items:center;
+    padding:0 80px;
+    position:relative;
+  ">
+    <div style="
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.35);
+    "></div>
+
+    <div style="position:relative;max-width:600px;color:white;">
+      <p style="
+        font-size:14px;
+        letter-spacing:4px;
+        margin-bottom:16px;
+        opacity:.85;
+      ">
+        NOVA COLEÇÃO 2026
+      </p>
+
+      <h1 style="
+        font-size:72px;
+        line-height:1;
+        margin:0 0 24px;
+        font-weight:700;
+      ">
+        {{ .TituloHeader }}<br>
+        que veste atitude.
+      </h1>
+
+      <p style="
+        font-size:18px;
+        line-height:1.7;
+        opacity:.9;
+        margin-bottom:36px;
+      ">
+        {{ .DescricaoHeader }}
+      </p>
+
+      <button style="
+        background:white;
+        color:black;
+        border:none;
+        padding:16px 34px;
+        font-size:14px;
+        font-weight:700;
+        cursor:pointer;
+        border-radius:999px;
+        transition:.3s;
+      ">
+        EXPLORAR
+      </button>
+    </div>
+  </section>
+
+  <!-- FEATURED -->
+  <section style="padding:90px 60px;background:#fff;">
+    <div style="
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      margin-bottom:40px;
+    ">
+      <div>
+        <p style="
+          letter-spacing:3px;
+          font-size:13px;
+          color:#666;
+          margin-bottom:10px;
+        ">
+          DESTAQUES
+        </p>
+
+        <h2 style="
+          margin:0;
+          font-size:42px;
+        ">
+          Essenciais modernos
+        </h2>
+      </div>
+
+      <a href="#" style="
+        text-decoration:none;
+        color:#111;
+        font-size:14px;
+      ">
+        Ver tudo →
+      </a>
+    </div>
+
+    <div style="
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:28px;
+    ">
+
+      <!-- CARD -->
+      <div style="
+        background:#f8f8f8;
+        border-radius:24px;
+        overflow:hidden;
+      ">
+        <img
+          src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop"
+          style="width:100%;height:380px;object-fit:cover;"
+        />
+
+        <div style="padding:24px;">
+          <h3 style="margin:0 0 10px;font-size:22px;">
+            Oversized Hoodie
+          </h3>
+
+          <p style="
+            margin:0 0 18px;
+            color:#666;
+            line-height:1.6;
+          ">
+            Modelagem ampla e tecido premium para conforto absoluto.
+          </p>
+
+          <strong style="font-size:18px;">
+            R$ 289
+          </strong>
+        </div>
+      </div>
+
+      <!-- CARD -->
+      <div style="
+        background:#f8f8f8;
+        border-radius:24px;
+        overflow:hidden;
+      ">
+        <img
+          src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200&auto=format&fit=crop"
+          style="width:100%;height:380px;object-fit:cover;"
+        />
+
+        <div style="padding:24px;">
+          <h3 style="margin:0 0 10px;font-size:22px;">
+            Minimal Jacket
+          </h3>
+
+          <p style="
+            margin:0 0 18px;
+            color:#666;
+            line-height:1.6;
+          ">
+            Jaqueta clean com acabamento sofisticado e visual urbano.
+          </p>
+
+          <strong style="font-size:18px;">
+            R$ 459
+          </strong>
+        </div>
+      </div>
+
+      <!-- CARD -->
+      <div style="
+        background:#f8f8f8;
+        border-radius:24px;
+        overflow:hidden;
+      ">
+        <img
+          src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop"
+          style="width:100%;height:380px;object-fit:cover;"
+        />
+
+        <div style="padding:24px;">
+          <h3 style="margin:0 0 10px;font-size:22px;">
+            Basic Collection
+          </h3>
+
+          <p style="
+            margin:0 0 18px;
+            color:#666;
+            line-height:1.6;
+          ">
+            O essencial refinado para combinar com qualquer estilo.
+          </p>
+
+          <strong style="font-size:18px;">
+            R$ 199
+          </strong>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BANNER -->
+  <section style="
+    padding:120px 40px;
+    text-align:center;
+    background:#111;
+    color:white;
+  ">
+    <p style="
+      letter-spacing:4px;
+      font-size:13px;
+      opacity:.7;
+      margin-bottom:20px;
+    ">
+      {{ .Nome }} EXPERIENCE
+    </p>
+
+    <h2 style="
+      font-size:54px;
+      max-width:800px;
+      margin:0 auto 24px;
+      line-height:1.1;
+    ">
+      Moda minimalista para quem prefere presença ao excesso.
+    </h2>
+
+    <button style="
+      margin-top:10px;
+      background:white;
+      color:black;
+      border:none;
+      padding:16px 34px;
+      border-radius:999px;
+      font-weight:700;
+      cursor:pointer;
+    ">
+      COMPRAR AGORA
+    </button>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="
+    background:#fff;
+    padding:40px 60px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:20px;
+    border-top:1px solid #e5e5e5;
+  ">
+    <div>
+      <div style="
+        font-size:22px;
+        font-weight:700;
+        letter-spacing:4px;
+        margin-bottom:10px;
+      ">
+        {{ .Nome }}
+      </div>
+
+      <p style="color:#666;margin:0;">
+        © 2026 {{ .Nome }}. Todos os direitos reservados.
+      </p>
+    </div>
+
+    <div style="
+      display:flex;
+      gap:24px;
+      align-items:center;
+    ">
+      <a href="#" style="text-decoration:none;color:#111;">Instagram</a>
+      <a href="#" style="text-decoration:none;color:#111;">TikTok</a>
+      <a href="#" style="text-decoration:none;color:#111;">Pinterest</a>
+    </div>
+  </footer>
+
+</body>
+</html>
