@@ -8,7 +8,8 @@ import (
 
 type Cache struct {
 	data map[string]any
-	mu   sync.Mutex
+	mu   sync.Mutex // Também existe o RWMutex, cujo método de bloqueio é RLock(), que permite leituras em paralelo desde que não haja nenhuma escrita, caso haja tem q esperar o RUnlock()
+	// o RWMutex é útil pra recursos que tem muitos acessos e poucas escritas, não tendo a necessidade de bloquear todas as operações
 }
 
 func NewCache() *Cache {
